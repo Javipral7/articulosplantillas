@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <header>
+        <div class="imagen-container">
+            <img src="{{ asset('libro.jpg') }}" alt="libro">
+        </div>
+        <div class="imagen-container">
+            {% include 'NuevoBundle:plantillas:mostrar_imagen.html.twig' %}
+        </div>
+        <div class="imagen-container">
+            {% include 'NuevoBundle:plantillas:mostrar_imagen_parametro.html.twig' with {'imagen': asset('libro.jpg')} %}
+        </div>
+    </header>
+    <div>
+        {% block content %}
+            <h2>{{ articulo.title }}</h2>
+        {% endblock %}
+    </div>
+    <footer>
+     <p>Fecha del sistema: {{ "now"|date("d-m-Y") }}</p>
+    </footer>
+{% endblock %}

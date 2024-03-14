@@ -1,0 +1,23 @@
+nuevo_bundle_homepage:
+    pattern:  /
+    defaults: { _controller: NuevoBundle:Default:index }
+
+nuevo_bundle_articulos_lista:
+    pattern: /lista
+    defaults: { _controller: NuevoBundle:Articulo:listado }
+
+nuevo_bundle_articulo_seleccionado:
+    path: /articulo/{id}
+    defaults: { _controller: NuevoBundle:Articulo:seleccionado }
+
+nuevo_bundle_articulo_default:
+    path: /articulo
+    defaults: { _controller: NuevoBundle:Articulo:defaultRedirect }
+
+nuevo_bundle_listar_articulos:
+    path: /listar
+    defaults: { _controller: NuevoBundle:Listar:listarArticulos }
+    
+nuevo_bundle_mostrar_articulo:
+    path: /mostrar/{id}
+    defaults: { _controller: NuevoBundle:Articulo:mostrarArticulo }

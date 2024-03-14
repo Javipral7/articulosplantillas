@@ -1,0 +1,7 @@
+{# listar_Articulos.html.twig #}
+<h1>Artículos</h1>
+<ul>
+    {% for articulo in articulos %}
+        <li><a href="{{ path('nuevo_bundle_mostrar_articulo', {'id': articulo.id}) }}">{{ articulo.title }}</a></li>
+    {% endfor %}
+</ul>

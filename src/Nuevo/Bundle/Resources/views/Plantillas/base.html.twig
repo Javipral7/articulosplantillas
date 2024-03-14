@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}articulos{% endblock %}</title>
+    {% block stylesheets %}{% endblock %}
+</head>
+
+<body>
+    {% block body %}
+        <header>
+        </header>
+        
+        <div id="content">
+            {% block content %}{% endblock %}
+        </div>
+        
+        <footer>
+            <p>Fecha del sistema: {{ "now"|date("d-m-Y") }}</p>
+        </footer>
+    {% endblock %}
+</body>
+</html>
+
